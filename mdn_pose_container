@@ -1,0 +1,14 @@
+Bootstrap: docker
+From: pytorch/pytorch
+
+%labels
+    Maintainer Brian Davis
+ 
+%post
+    apt update
+    apt install -y python3-venv
+    python3 -m pip install --user virtualenv
+    pip3 install progress
+    pip3 install opts
+    pip3 install opencv
+    pip3 install matplotlib
